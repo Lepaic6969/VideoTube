@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoTube</title>
+    <link rel="icon" type="image/svg" href="../assets/img/logo.svg"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/agregar.css">
+</head>
+<body>
+    <header>
+        <div class=" logo-agregar">
+            <img src="../assets/img/logo.svg" alt="logo">
+            <h1>VideoTube</h1>
+        </div>
+
+    </header>
+
+    <main class="contenedor-formulario">
+        <form id="formulario">
+            <input type="text" placeholder="Enlace" id="url"> <br> 
+            <input type="text" placeholder="Titulo" id="titulo"> <br> 
+            
+            <input type="text" placeholder="Autor" id="autor"> <br> 
+            <input type="text" placeholder="Fecha" id="fecha"> <br> 
+            <input type="text" placeholder="Vistas" id="vistas"> <br> 
+            <select  id="categoria">
+                <option value="musica">musica</option>
+                <option value="programacion">programación</option>
+                <option value="diseño">diseño</option>
+            </select> <br> 
+            <input type="submit" value="Crear" ">
+
+        </form>
+    </main>
+    
+
+
+    <script src="../scripts/agregar.js" type="module"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>

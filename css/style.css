@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:rgba(24, 24, 24, 1);
+    overflow-x: hidden;
+}
+
+/* Estilos Cabecera */
+header{
+
+    height: 10vh;
+    display:flex;
+    gap: 3%;
+
+}
+.logo{
+    line-height: 10vh;
+    width: 15%;
+    margin-left: 3%;
+    cursor: pointer;
+}
+.logo img{
+    display: block;
+    margin-top: 1.5vh;
+    float: left;
+}
+.logo h1{
+    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+   
+    float: left;
+}
+
+.buscar-video{
+    width: 42%;
+   margin-top:2.5vh;
+}
+.buscar-video input{
+ 
+    width: 85%;
+    height: 5vh;
+    background-color:rgba(24, 24, 24, 1); 
+    border: 1px solid rgb(67,67,67);
+    float: left;
+    font-weight: bolder;
+    color:white;
+ 
+}
+.buscar-video form button{
+    
+    height: 5.5vh;
+    width: 14%;
+    background-color: rgb(55,55,55);
+    border-radius: 0px 8px 8px 0px;
+    border: none;
+    float: left;
+}
+.buscar-video form button img{
+    width: 27%;
+}
+.oculto{
+    margin-left: 5%;
+    height: 8vh;
+    width: 15%;
+    display: none;
+    /* border: 1px solid white; */
+}
+.oculto img{
+    display: block;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 2.5vh;
+    
+}
+
+
+
+
+
+/* Botones */
+
+.menu{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+   
+}
+.btn-filtro{
+    height: 55%;
+    width: auto;
+    padding: 8px 16px 8px 16px;
+    border-radius: 44px;
+    margin-left: 2%;
+    background-color: rgba(55, 55, 55, 1);
+    color:white;
+    border: 1px solid rgb(111,111,111);
+    cursor: pointer;
+}
+.seleccionado{ /************************************************************************/
+     color:rgba(55, 55, 55, 1) !important;
+     background-color:rgb(255,255,255) !important;
+  
+}
+
+.menu #todos{
+    margin-left: 3%;
+}
+
+.contenedor-videos{
+    width: 100%;
+    padding: 3%;
+    display: flex;
+    gap:1%;
+    flex-wrap: wrap;
+    
+}
+.video-tarjeta{
+  
+    width: 22%;
+    /* border:1px solid white; */
+    color:white;
+    margin-bottom: 5vh;
+    cursor: pointer;
+}
+.video {
+    width: 100%;
+    /* height: 60%; */
+}
+.video-avatar{
+    margin-top: 2vh;
+    width: 15%;
+    float: left;
+}
+.video-avatar img{
+    display: block;
+    width: 70%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.video-texto{
+    margin-top: 2vh;
+    width: 85%;
+    float: left;
+    font-family: 'Poppins', sans-serif;
+  
+}
+.video-texto h2{
+    
+   font-weight: 700;
+   font-size: 16px;
+}
+.video-texto p{
+    margin-top: 1vh;
+    font-weight: 400;
+    font-size: 14px;
+    color:rgba(163, 163, 163, 1);
+}
+
+/* Estilos para el botón de agregar */
+
+.btn-agregar{
+    /* position:fixed; */
+    z-index: 999;
+    /* margin-top: 1vh; */
+    margin-left: 2vw;
+    width:2rem;
+    height: 2rem;
+    /* height: 55%;
+    width:auto; */
+    border-radius: 50%;
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+    color:rgba(55, 55, 55, 1) ;
+    background-color:rgb(255,255,255);
+    border: 1px solid rgb(111,111,111);
+    cursor: pointer;
+    outline: 0;
+    /* border:0; */
+    transition: all 0.3s ease-out
+}
+.btn-agregar:hover{
+    color:rgb(255,255,255);
+    background-color:rgba(55, 55, 55, 1) ;
+    
+}
+.btn-auxiliar{
+    margin-left: 95%;
+    margin-bottom: 10%;
+    display:none;
+}
+
+
+/* Aquí va el Responsive */
+@media(max-width:1100px){
+    header{
+        gap: 10%;
+    }
+    .logo{
+     
+        width: 25%;
+    }
+    
+     
+}
+@media(max-width:1000px){
+    .logo img{
+        margin-top: 2.5vh;
+    }
+}
+@media(max-width:900px){
+    header{
+        gap: 20%;
+    }
+    .logo{
+     
+        width: 30%;
+    }
+    .logo img{
+        margin-top: 2.5vh;
+    }
+    .video-tarjeta{
+  
+        width: 30%;
+       
+    }
+    
+    
+    .buscar-video form button{
+    
+        height: 5.5vh;
+    }
+    .buscar-video input{
+        margin-top: 0.15vh;
+    }
+
+    
+    
+     
+}
+
+@media(max-width:700px){
+    
+    .video-tarjeta{
+
+        width: 45%;
+    }
+    .contenedor-videos{
+        gap:3%;
+    }
+    .buscar-video{
+       display:none;
+     
+    }
+   
+    .logo{
+        margin-left:80px;
+        width: 45%;
+    }
+    .logo img{
+        margin-top: 3vh;
+    }
+    .logo img{
+        display: block;
+        width: 20%;
+        margin: 0 auto;
+        margin-right: 12px;
+        margin-top: 1vh;
+    }
+    .logo h1{
+        font-size: 2em;
+       
+        float: left;
+    }
+    .oculto{
+        display: block;
+    }
+    .btn-auxiliar{
+        margin-left: 90%;
+    }
+}
+
+@media(max-width:600px){
+    .video-tarjeta{
+        width: 93%;
+    }
+    .logo{
+        margin-left:60px;
+        width: 55%;
+    }
+    .oculto{
+        margin-left: 1%;
+    }
+    .oculto img{
+        margin-top: 2.5vh;
+        margin-left: 0;
+        
+    }
+    .logo h1{
+        font-size: 2em;
+    }
+    .logo img{
+        width: auto;
+        height: 80%;
+    }
+}
+@media(max-width:550px){
+
+    .btn-filtro{
+      
+        width:auto;
+       
+    }
+}
+@media(max-width:480px){
+    .logo{
+        margin-left:40px;
+        width: 65%;
+    }
+    .logo h1{
+        font-size: 1.5em;
+    }
+    
+}
+
+@media(max-width:460px){
+    .btn-agregar{
+      display:none;
+    }
+    .btn-auxiliar{
+        margin-left: 87%;
+        display:block;
+    }
+}
+
+@media(max-width:410px){
+    .btn-filtro{
+     padding: 2px 8px 2px 8px;;
+    }
+}
+@media(max-width:362px){
+    /* #diseño{
+        display:none;
+    } */
+    .btn-filtro{
+      
+        width: auto;
+       
+    }
+    .oculto img{
+        margin-top: 2.5vh;
+        margin-left: 0;
+        margin-right: 15px;
+        
+    }
+}
+@media(max-width:350px){
+    .logo h1{
+        font-size: 1.4em;
+    }
+  
+    .logo img{
+        margin-top: 15px;
+        margin-right: 5px;
+        height: 70%;
+    }
+    .btn-filtro{
+        padding: 1px 4px 1px 4px;
+    }
+    .video-texto h2{
+        font-size: 14px;
+     }
+     .video-texto p{
+        font-size: 12px;
+      
+    }
+}
+@media(max-with:337px){
+    .btn-filtro{
+        padding: 0px 2px 0px 2px;
+    }
+}
+@media(max-width:320px){
+    .logo h1{
+        font-size: 1.3em;
+    }
+  
+    .logo img{
+        margin-top: 15px;
+        margin-right: 5px;
+        height: 65%;
+    }
+    
+    
+}
+@media(max-width:300px){
+    .logo h1{
+        font-size: 1.2em;
+    }
+  
+    .logo img{
+        margin-top: 15px;
+        margin-right: 5px;
+        height: 60%;
+    }
+    .btn-filtro{
+        margin-left: 1%;
+    }
+    .video-texto h2{
+        font-size: 12px;
+     }
+    .video-texto p{
+        font-size: 10px;
+      
+    }
+   
+    
+}
+@media(max-width:285px){
+    .menu #todos{
+        margin-left: 1%;
+    }
+}
